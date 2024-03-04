@@ -24,14 +24,22 @@ var client = contentful.createClient({
     entryDiv.appendChild(name);
 
     var link = document.createElement('a');
-    link.innerHTML = "link to" + entry.fields.groupName;
+    link.innerHTML = "link to Socials of " + entry.fields.groupName;
     link.href = entry.fields.linkToProfile;
         //placeForContent.appendChild(link);
         entryDiv.appendChild(link);
 
+
+
+
     var groupimage = document.createElement('img');
     groupimage.src = 'https:' + entry.fields.groupimage.fields.file.url;
     entryDiv.appendChild(groupimage);
+
+    var linkToDetails = document.createElement('a');
+    linkToDetails.innerHTML =  "link to details of " + entry.fields.groupName;
+    linkToDetails.href = "details.html?id="+entry.sys.id;
+    entryDiv.appendChild(linkToDetails);
 
     var description = document.createElement('p');
     description.innerHTML = entry.fields.description;

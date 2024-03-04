@@ -15,7 +15,7 @@ h1 {
     margin-left: 30px;
 }
 
-img {
+img, .band-image {
     width: 60%;
     display: block;
     margin-left: auto;
@@ -35,6 +35,17 @@ img {
     margin-right: 100px;
     padding: 50px 50px 50px 50px;
     grid-column-gap: 20px;
+}
+
+.band-name {
+    font-size: 2em;
+    text-align: center; 
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 70px;
+    margin-left: 170px;
+    margin-right: 170px;
 }
 
 video {
