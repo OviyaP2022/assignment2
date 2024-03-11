@@ -18,7 +18,21 @@ var client = contentful.createClient({
     group.appendChild(name);
 
     var groupimage = document.createElement('img');
-    name.classList.add('band-image');
-    groupimage.src = 'https:' + entry.fields.groupimage.fields.file.url;
-    entryDiv.appendChild(groupimage);
+    groupimage.classList.add('band-image');
+    groupimage.src = entry.fields.groupimage.fields.file.url;
+    group.appendChild(groupimage);
+
+    var musicVideo = document.createElement('video');
+    musicVideo.src = 'https:' + entry.fields.musicVideo.fields.file.url;
+    musicVideo.controls = true;
+    musicVideo.classList.add('music-video');
+    musicVideo.innerHTML = entry.fields.musicVideo;
+    group.appendChild(musicVideo);
+ 
+    var description = document.createElement('p');
+    description.classList.add('band-description');
+    description.innerHTML = entry.fields.description;
+    group.appendChild(description);
+
+    // entryDiv.appendChild(musicVideo);
   });

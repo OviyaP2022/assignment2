@@ -1,5 +1,3 @@
-console.log("hello world");
-
 var client = contentful.createClient({
     space: 'ete5e4krj05q',
     accessToken: 'Bb-Y-ihGV2S_IjpzqfnpOdE5hrgWxqe1l3LDqWLL8-8',

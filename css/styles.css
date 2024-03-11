@@ -15,7 +15,11 @@ h1 {
     margin-left: 30px;
 }
 
-img, .band-image {
+h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+img {
     width: 60%;
     display: block;
     margin-left: auto;
@@ -31,21 +35,46 @@ img, .band-image {
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-family: sans-serif;
     margin-left: 100px;
     margin-right: 100px;
     padding: 50px 50px 50px 50px;
     grid-column-gap: 20px;
 }
 
+#group {
+    background-color: #fff;  
+}
+
 .band-name {
     font-size: 2em;
     text-align: center; 
+    font-family:sans-serif;
     width: 80%;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 70px;
     margin-left: 170px;
     margin-right: 170px;
+}
+
+.band-image {
+    width: 40%;
+    border: solid red 5px;
+    margin-left: 80px;
+}
+
+.band-description {
+    font-size: 20px;
+    margin-left: 40px;
+    margin-top: 100px;
+}
+
+.music-video {
+    width: 40%;
+    height: 40%;
+    margin-left: 780px;
+    margin-top: -340px;
+
 }
 
 video {
@@ -75,9 +104,28 @@ footer {
 @media screen and (max-width: 64em){  /* small laptop < 1024px */
     #place-for-content {
         grid-template-columns: 1fr;
-        align-items: center;
+        align-items: center;  
+    }
 
-        
+    .band-name {
+        margin-left: 8.125em;
+        margin-right: 10.625em;
+    }
+    
+    .band-image {
+        margin-left: 5em;
+    }
+    
+    .band-description {
+        font-size: 1em;
+        margin-left: 2.5em;
+        margin-top: 7em;
+    }
+    
+    .music-video {
+        margin-left: 31.25em;
+        margin-top: -15.625em;
+    
     }
 }
 
@@ -85,36 +133,78 @@ footer {
     #place-for-content {
         grid-template-columns: 1fr;
         align-items: center;
-        margin-left: 20px;
-        margin-right: 20px;
-
-
+        margin-left: 1.25em;
+        margin-right: 1.25em;
     }
 
     img {
-        width: 300px;
+        width: 18.75em;
     }
 
     video {
         width: 80%;
         height: 80%;
+    }
+
+    .band-name {
+        margin-left: 3.2em;
+    }
+    
+    .band-image {
+        width: 70%;
+        margin-left: 7em;
+    }
+    
+    .band-description {
+        font-size: 1em;
+        margin-left: 3.5em;
+        margin-top: 4em;
+    }
+    
+    .music-video {
+        width: 70%;
+        margin-left: 7em;
+        margin-top: 4em;
+    
     }
 }
 
 @media screen and (max-width: 30em){ /* mobile < 480px */
     #place-for-content {
         grid-template-columns: 1fr;
-        margin-left: 20px;
-        margin-right: 20px;
-
+        align-items: center;
+        margin-left: 1.25em;
+        margin-right: 1.25em;
     }
 
-   img {
-        width: 200px;
+    img {
+        width: 18.75em;
     }
 
     video {
         width: 80%;
         height: 80%;
+    }
+
+    .band-name {
+        margin-left: 3.2em;
+    }
+    
+    .band-image {
+        width: 70%;
+        margin-left: 7em;
+    }
+    
+    .band-description {
+        font-size: 1em;
+        margin-left: 3.5em;
+        margin-top: 4em;
+    }
+    
+    .music-video {
+        width: 70%;
+        margin-left: 7em;
+        margin-top: 4em;
+    
     }
 }
