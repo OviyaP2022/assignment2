@@ -31,22 +31,29 @@ var client = contentful.createClient({
 
 
     var groupimage = document.createElement('img');
-    groupimage.src = 'https:' + entry.fields.groupimage.fields.file.url;
-    entryDiv.appendChild(groupimage);
+    if (entry.fields.groupimage){
+      groupimage.src = 'https:' + entry.fields.groupimage.fields.file.url;
+
+    }
+    // entryDiv.appendChild(groupimage);
 
     var linkToDetails = document.createElement('a');
-    linkToDetails.innerHTML =  "link to details of " + entry.fields.groupName;
+    // linkToDetails.innerHTML =  "link to details of " + entry.fields.groupName;
     linkToDetails.href = "details.html?id="+entry.sys.id;
+    linkToDetails.appendChild(groupimage);
     entryDiv.appendChild(linkToDetails);
 
-    var description = document.createElement('p');
-    description.innerHTML = entry.fields.description;
-    entryDiv.appendChild(description);
+    // var description = document.createElement('p');
+    // description.innerHTML = entry.fields.description;
+    // entryDiv.appendChild(description);
 
-    var musicVideo = document.createElement('video');
-    musicVideo.src = 'https:' + entry.fields.musicVideo.fields.file.url;
-    musicVideo.controls = true;
-    entryDiv.appendChild(musicVideo);
+     // var musicVideo = document.createElement('video');
+  // if (entry.fields.musicVideo) {
+       // musicVideo.src = 'https:' + entry.fields.musicVideo.fields.file.url;
+       // musicVideo.controls = true;
+      // entryDiv.appendChild(musicVideo);
+   //}
+
 
 
         placeForContent.appendChild(entryDiv);
