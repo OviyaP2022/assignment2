@@ -8,7 +8,7 @@ var client = contentful.createClient({
 
 
   // gets all the entries as a json
-  client.getEntries().then(function (entries) {
+  client.getEntries({content_type:'wellKnownKPopGroups'}).then(function (entries) {
     // loops through the json to look at one entry at a 
     entries.items.forEach(function (entry) {
     // if statement checks that this field exists 
